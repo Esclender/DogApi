@@ -1,13 +1,26 @@
-import { checker } from './project.service'
+import { breedsList, ShowImages, changeFavImages, saveBreed } from './project.service'
+import { drop, favBtn, loading, lovedIcon, favImg } from './project.module'
 
-checker()
+breedsList()
+  .then(res => {
+    if (drop !== null) {
+      ShowImages(drop.innerHTML)
+    }
 
-// breedsList()
-//   .then(item => {
-//     let dropItems = document.querySelectorAll('.dropdown-item')
-//     dropItems.forEach(item => {
-//       item.addEventListener('click', (e) => {
-//         ShowImages(1, item.childNodes[0].nodeValue)
-//       })
-//     })
-//   })
+    changeFavImages()
+
+    favBtn.forEach(item => {
+      item.addEventListener('click', (e) => {
+        if (item.classList.contains('love-btn')) {
+          saveBreed(favImg?.attributes[3].nodeValue)
+            .then(res => {
+              lovedIcon?.classList.toggle('offcanvas')
+              lovedIcon?.classList.toggle('vanishOut')
+            })
+        } else {
+          changeFavImages()
+            .then(res => { loading?.classList.toggle('offcanvas') })
+        }
+      })
+    })
+  })

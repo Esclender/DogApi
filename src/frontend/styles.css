@@ -9,7 +9,7 @@ body{
 
 
 #cards{
-  padding-top: 90px;
+  padding-top: 50px;
   height: 100vh;
   width: 100%;
   
@@ -112,18 +112,109 @@ body{
   font-size: 25px;
 }
 
+/*BREEDS*/
+.breeds{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 .breeds >  h2{
   text-decoration: underline;
 }
 
-.card{
-  width: 100vw;
-  height: 600px;
-}
 
 .carousel-item > img{
   height: 350px;
 }
+
+.form-select{
+  background-color: transparent;
+  width: 60%;
+}
+
+.carousel-indicators{
+  background-color: #22222245;
+}
+
+.form-select{
+  box-shadow: 4px -11px 33px -11px rgba(0,0,0,0.52);
+  border: none;
+  border-bottom: 2px solid #3d3c3c;
+}
+
+.dropdown{
+  border-bottom: 1px solid #000000c4;
+}
+
+
+.btn.show{
+  border: none;
+}
+
+/*BREED'S END*/
+
+/*FAVORITE'S BREEDS*/
+
+.card{
+  border: none;
+}
+
+.favorites-breeds{
+  flex-flow: column;
+  align-items: center;
+}
+
+.favorite-card{
+  width: 270px;
+  border-radius: 20%;
+}
+
+.btn-fav{
+  margin: 10px;
+  width: 80px;
+  height: 40px;
+  position: absolute;
+}
+
+.next-btn{
+  right: 0 ;
+  bottom: 0 ;
+}
+
+.love-btn{
+  bottom: 0;
+}
+
+.fav-img{
+  width: 100%;
+  height: 300px;
+}
+
+.spinner-border{
+  position: absolute;
+  top: 40%;
+  right: 45%;
+}
+
+.loved-icon{
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  color: rgba(185, 16, 16, 0.695);
+  font-size: 90px;  
+}
+
+/*UPLOAD BREED*/
+
+.breed-upload_info{
+  width: 380px;
+  height: 500px;
+  background-image: url('./assets/Rectangle 1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 
 @media screen and (min-width:750px) {
